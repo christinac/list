@@ -4,11 +4,11 @@ require 'lib/subscriber'
 
 class CCForm < Sinatra::Base
 
-	get '/list' do 
+	get '/updates' do 
 		erb :list
 	end
 
-	post '/list' do
+	post '/updates' do
 		subscriber = Subscriber.new(params, request.ip)
 		subscriber.email_me()
 		subscriber.save()
