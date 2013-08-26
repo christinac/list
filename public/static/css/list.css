@@ -29,9 +29,23 @@ div.faketable{
     display: table-cell;
     width:100%;
     vertical-align: top;
+    font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    line-height: 26pt;
 }
 
 div.li-row{
     display: table-row;
     width: 100;
+}
+
+p.thanks{
+    font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    text-align: center;    
+}
+
+input.larger{
+    width: 150px;
+    height: 40px;
 }
