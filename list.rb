@@ -9,7 +9,18 @@ class CCForm < Sinatra::Base
 	end
 
 	post '/list' do
-		# TODO: find (and pass?) IP address
-		subscriber = Subscriber.new(params)
-		# TODO: email myself when someone subscribes?
+		subscriber = Subscriber.new(params, request.ip)
+		subscriber.email_me()
+		subscriber.save()
+		erb :thanks
 	end
+
+	helpers do
+	  def nest_template(path)
+	  	path = File.expand_path(File.dirname(__FILE__)) + '/' + path
+    	content = File.read(File.expand_path(path))
+	    t = ERB.new(content)
+	    t.result(binding)
+	  end
+	end
+end
