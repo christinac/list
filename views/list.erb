@@ -3,16 +3,16 @@
 <html>
 	<head>
 		<title>Christina Cacioppo</title>
-    <link rel="stylesheet" type="text/css" href="../cc.css">
-    <link rel="stylesheet" type="text/css" href="static/css/forms.css">
-		<link rel="stylesheet" type="text/css" href="static/css/list.css">
+    <link rel="stylesheet" type="text/css" href="static/css/cc.css">
+    <link rel="stylesheet" type="text/css" href="http://laisin.s3.amazonaws.com/static/css/forms.css">
+    <link rel="stylesheet" type="text/css" href="static/css/list.css">
 	</head>
 	<body>
-	  <div class="centerdiv">
+	  <div class="centerdiv" style="background: inherit;">
 	
 	  <div class="blog-name">Updates</div>
 
-    <p>Sign up below to hear about the projects Christina's working on. You can get emails only for major announcements – a new product launch, say – or for smaller milestones too.</p>
+    <p>Sign up below to hear what Christina's working on. You can choose only major announcements – a new product launch, say – or emails for smaller milestones too.</p></br>
 
     <form action="" method="post">
       <ul>
@@ -21,7 +21,7 @@
           <div class="li-row">
           <label class="mailinglist">Name</label>
             <div class="faketable">
-            <input id="name" type="text" name="name" value="">
+            <input id="name" type="text" name="name" value="" placeholder="Name">
           </div>
          </div>
         </li>
@@ -30,7 +30,7 @@
           <div class="li-row">
           <label class="mailinglist">Email</label>
             <div class="faketable">
-            <input id="email" type="text" name="email" value="">
+            <input id="email" type="text" name="email" value="" placeholder="Email address">
           </div>
          </div>
         </li>
@@ -39,23 +39,29 @@
           <div class="li-row">
           <label class="mailinglist">Phone</label>
             <div class="faketable">
-              <input type="checkbox" name="phone" value="android"> Android &nbsp;&nbsp;&nbsp;
-              <input type="checkbox" name="phone" value="iphone"> iPhone
+              <input type="radio" name="phone" value="android" checked> Android </br>
+              <input type="radio" name="phone" value="iphone"> iPhone
           </div>
          </div>
         </li>
 
         <li class="mailinglist">
           <div class="li-row">
-          <label class="mailinglist">Emails</label>
+          <label class="mailinglist">Updates?</label>
             <div class="faketable">
-              <input type="checkbox" name="frequency" value="launches"> Launches only &nbsp;&nbsp;&nbsp;
-              <input type="checkbox" name="frequency" value="updates"> Launches + updates
+              <input type="radio" name="frequency" value="launches" checked> Launches only </br>
+              <input type="radio" name="frequency" value="updates"> Updates & launches
           </div>
          </div>
         </li>
 
+        <li class="mailinglist" style="border: none;">
+          <label class="mailinglist"></label>
+          <input class="btn larger" type="submit" value="Subscribe">
+        </li>
+
       </ul>
+
     </form>
 
   <%= nest_template 'views/ganalytics.erb' %>
