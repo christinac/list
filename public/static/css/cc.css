@@ -1,0 +1,90 @@
+body {
+	font-family: 'franklin-gothic-urw', 'Palatino', Georgia, serif;
+	text-align: left;
+	font-size: 14pt;
+	line-height: 18pt;
+	background-color: #fafafa;
+	margin: 0px;
+}
+
+.centerdiv{
+	width: 70%;
+	margin: -7px auto;
+	background: #fefefe;
+	padding: 3em;
+	border: 7px solid #eee;
+}
+
+.blog-name{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size:4em;
+	margin-bottom: 0.5em;
+	font-weight: bold;
+	line-height: 1em;
+	color: #6a797d;
+	text-shadow: #e5e5ee 2px 3px 0px;
+}
+
+.heading{
+	font-size:1em;
+	font-weight:bold;
+	line-height:3em;
+	color:#6a797d;
+	text-shadow:#e5e5ee 2px 3px 0px;
+}
+
+ul#nav {
+	list-style: none;
+	list-style-position: initial;
+	padding-left: 0px;
+	position: absolute;
+	right: 15%;
+}
+
+li.external{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	font-size: 11pt;
+	line-height: 15pt;
+	margin-bottom: none;
+}
+
+a, a:visited{
+	color: #f33;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #6a797d;
+	text-decoration: none;
+}
+
+h2.title{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	margin-bottom: 0.25em;
+}
+
+div.body{
+	margin-top: 0.5em;
+	margin-bottom: 5em;
+	font-size: 1em;
+	line-height: 1.75em;
+	color: #2a2a2a;
+	letter-spacing: 0.06em;
+}
+
+li{
+	margin-bottom: 0.75em;
+	line-height: 1.5em;
+}
+
+a.date{
+	color: #6a797d;
+	font-size: 0.85em;
+	font-style: italic;
+}
+
+a.date:hover{
+	text-decoration: underline;
+}
