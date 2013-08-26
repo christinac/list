@@ -62,7 +62,7 @@ task :deploy => :environment do
 
     to :launch do
       queue "touch #{deploy_to}/tmp/restart.txt"
-      queue "god -c  /root/www/christinacacioppo.com/blog/simple.god -D"
+      queue "god restart list"
       # queue "killall -KILL shotgun; sleep 2"
       # queue "shotgun /root/www/christinacacioppo.com/blog/current/config.ru &"
       # queue "sleep 1"
