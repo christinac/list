@@ -1,0 +1,63 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Christina Cacioppo</title>
+    <link rel="stylesheet" type="text/css" href="../cc.css">
+		<link rel="stylesheet" type="text/css" href="static/css/list.css">
+	</head>
+	<body>
+	  <div class="centerdiv">
+	
+	  <div class="blog-name">Updates</div>
+
+    <p>Sign up below to hear about the projects Christina's working on. You can get emails only for major announcements – a new product launch, say – or for smaller milestones too.</p>
+
+    <form action="" method="post">
+      <ul>
+
+        <li class="mailinglist">
+          <div class="li-row">
+          <label class="mailinglist">Name</label>
+            <div class="faketable">
+            <input id="name" type="text" name="name" value="">
+          </div>
+         </div>
+        </li>
+
+        <li class="mailinglist">
+          <div class="li-row">
+          <label class="mailinglist">Email</label>
+            <div class="faketable">
+            <input id="email" type="text" name="email" value="">
+          </div>
+         </div>
+        </li>
+
+        <li class="mailinglist">
+          <div class="li-row">
+          <label class="mailinglist">Phone</label>
+            <div class="faketable">
+              <input type="checkbox" name="phone" value="android"> Android &nbsp;&nbsp;&nbsp;
+              <input type="checkbox" name="phone" value="iphone"> iPhone
+          </div>
+         </div>
+        </li>
+
+        <li class="mailinglist">
+          <div class="li-row">
+          <label class="mailinglist">Emails</label>
+            <div class="faketable">
+              <input type="checkbox" name="frequency" value="launches"> Launches only &nbsp;&nbsp;&nbsp;
+              <input type="checkbox" name="frequency" value="updates"> Launches + updates
+          </div>
+         </div>
+        </li>
+
+      </ul>
+    </form>
+
+  <%= nest_template 'views/ganalytics.erb' %>
+
+</body>
+</html>
