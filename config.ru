@@ -1,4 +1,4 @@
-Dir.chdir '/root/www/christinacacioppo.com/blog/current' 
+Dir.chdir '/root/www/christinacacioppo.com/list/current' 
 $:.unshift Dir.pwd
 
 require 'list.rb'
