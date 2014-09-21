@@ -14,12 +14,11 @@ label.mailinglist{
     display: table-cell;
     float: left;
     line-height: 1.3em;
-    height: 3em;
+    height: 1em;
     width: 280px;
     overflow: hidden;
     margin-left: 40px;
     margin-right: 60px;
-    font: 1.3em 'Helvetica-Neue', Helvetica, Arial, sans-serif;
     color: #555555;
     font-weight: 100;
     text-shadow: 0 1px rgba(255, 255, 255, 0.9);
@@ -29,7 +28,6 @@ div.faketable{
     display: table-cell;
     width:100%;
     vertical-align: top;
-    font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;
     font-weight: 100;
     line-height: 26pt;
 }
@@ -40,8 +38,6 @@ div.li-row{
 }
 
 p.thanks{
-    font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;
-    font-weight: 100;
     text-align: center;    
 }
 
