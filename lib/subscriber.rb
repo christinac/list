@@ -29,12 +29,12 @@ class Subscriber
 		end
 	end
 
-	def email_me()
+	def email_me(subject = "Subscription")
 		begin
 			RestClient.post "https://api:key-95f637w6x7efgar8u30x8eh-ajvfrf45@api.mailgun.net/v2/christinacacioppo.mailgun.org/messages",
 			:from => "CC.com <list-bot@christinacacioppo.com>",
 			:to => "ccacioppo+subscriber@gmail.com",
-			:subject => "Subscription",
+			:subject => subject,
 			:text => "%s (%s) subscribed! Does s/he want all the updates? %s" % [@name, @email, @updates]
 		rescue => e
 			puts e.response
