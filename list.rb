@@ -15,6 +15,12 @@ class CCForm < Sinatra::Base
 		erb :thanks
 	end
 
+	post '/updates/aces' do
+		subscriber = Subscriber.new(params, request.ip)
+		subscriber.email_me("[aces-post] subscription")
+		subscriber.save("aces_data/")
+	end
+
 	helpers do
 	  def nest_template(path)
 	  	path = File.expand_path(File.dirname(__FILE__)) + '/' + path
