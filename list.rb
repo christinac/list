@@ -18,7 +18,7 @@ class CCForm < Sinatra::Base
 	post '/updates/aces' do
 		subscriber = Subscriber.new(params, request.ip)
 		subscriber.email_me("[aces-post] subscription")
-		subscriber.save("aces_data/")
+		subscriber.save("/aces_data")
 	end
 
 	helpers do
