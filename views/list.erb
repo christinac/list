@@ -1,17 +1,34 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-	<head>
-		<title>Christina Cacioppo</title>
-    <!-- <link rel="stylesheet" type="text/css" href="http://www.christinacacioppo.com/blog/static/css/cc.css"> -->
-    <link rel="stylesheet" type="text/css" href="http://christinacacioppo.com/home.css">
-    <link rel="stylesheet" type="text/css" href="http://laisin.s3.amazonaws.com/static/css/forms.css">
-    <link rel="stylesheet" type="text/css" href="updates/static/css/list.css">
-	</head>
-	<body>
-	  <div class="centerdiv" style="padding:50px 50px; width:80%;">
-	
-	  <h1>Updates</h1>
+  <head>
+    <title>Kidogo | Christina Cacioppo</title>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.4.1/css/ionicons.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic|Inconsolata|Open+Sans:800,700,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://christinacacioppo.com/static/css/home.css">
+    <link rel="stylesheet" type="text/css" href="http://christinacacioppo.com/static/css/blog.css">
+  </head>
+  <body>
+    <div class="centerdiv">
+      <div class="header">
+        <div class="edge">
+          <h1>
+            <a href="http://www.twitter.com/christinacaci" onClick="recordOutboundLink(this, 'Outbound Links', 'twitter');return false;">
+            <i class="icon ion-social-twitter"></i></a>
+          </h1>
+        </div>
+        <div class="center">
+          <a href="/" style="color:#3a3a3a"><h1>Christina</h1></a>
+        </div>
+        <div class="edge">
+          <h1>
+            <a href="mailto:c@christinacacioppo.com" onClick="recordOutboundLink(this, 'Outbound Links', 'email');return false;"><i class="icon ion-paper-airplane"></i></a>
+          </h1>
+        </div>
+      </div>
+  
+  <div class="content">
+
+    <h1>Updates</h1>
 
     <p>I'll email this list when I've got something that seems worth sharing. The emails are super infrequent – even for the updates list.</p></br>
 
@@ -66,6 +83,7 @@
     </form>
 
   <%= nest_template 'views/ganalytics.erb' %>
-
+    
+  </div>
 </body>
 </html>
