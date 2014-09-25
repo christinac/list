@@ -5,23 +5,32 @@ require 'rest_client'
 class Subscriber
 	attr_reader :name, :email, :phone, :ipaddress, :date_added, :active
 
-	def self.all(directory = '/data')
-		if @all
-			@all
-		else
-			subscribers = []
-			Dir.glob(directory + '*.json').each do |file|
-				subscriber = Json.load(File.read(file))
-				id = File.basename(file, '.json')
+	BaseDir = '/data'
 
-				# subscribers >> self.new(:id => id, :name => subscriber['name'], :email => subscriber['email'], :phone => subscriber['phone'], @updates => subscriber['updates'], @ipaddress = subscriber['ipaddress'], @date_added => subscriber['date_added'], @active => subscriber['active'])
-			end
-			@all = subscribers
+	def path_for_type(type)
+		BaseDir + "/#{type}_#{@id}.json"
+	end
+
+	def self.all(type)
+		Dir.glob(BaseDir + "/#{type}_*.json").map do |file|
+			subscriber = JSON.load(File.read(file))
+			id = File.basename(file, '.json')
+
+			self.new({
+				:id => id,
+				:name => subscriber['name'],
+				:email => subscriber['email'],
+				:phone => subscriber['phone'],
+				:updates => subscriber['updates'],
+				:date_added => subscriber['date_added'],
+				:active => subscriber['active']},
+				subscriber['ipaddress']
+			)
 		end
 	end
 
-	def save(directory = 'data/')
-		filename = directory + @id + '.json'
+	def save(type)
+		filename = path_for_type(type)
 		File.open(filename, "w") do |f|
 			hash = {}
 			instance_variables.each {|var| hash[var.to_s.delete("@")] = instance_variable_get(var) }
